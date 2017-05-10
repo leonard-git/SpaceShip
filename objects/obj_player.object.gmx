@@ -74,9 +74,6 @@
             <kind>1</kind>
             <string>///Friction
 speed = max(speed - 0.05, 0);
-if(place_meeting(x,y,all)){
-    gamepad_set_vibration(0,1,1);
-}
 if(obj_player.hp&lt;=0){
     instance_destroy();
 }
@@ -94,7 +91,7 @@ if(obj_player.hp&lt;=0){
         <exetype>1</exetype>
         <functionname>action_bounce</functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -127,12 +124,7 @@ if(obj_player.hp&lt;=0){
           <argument>
             <kind>1</kind>
             <string>obj_player.hp-=10;
-if(place_meeting(x,y,all)){
-    gamepad_set_vibration(0,1,1);
-}
-if(obj_player.hp&lt;=0){
-    instance_destroy();
-}
+gamepad_set_vibration(0,1,1);
 </string>
           </argument>
         </arguments>
@@ -180,12 +172,8 @@ if(obj_player.hp&lt;=0){
           <argument>
             <kind>1</kind>
             <string>obj_player.hp-=10;
-if(place_meeting(x,y,all)){
-    gamepad_set_vibration(0,1,1);
-}
-if(obj_player.hp&lt;=0){
-    instance_destroy();
-}
+gamepad_set_vibration(0,1,1);
+
 </string>
           </argument>
         </arguments>
@@ -307,32 +295,6 @@ if(speed &gt; 4){
           <argument>
             <kind>4</kind>
             <string>2</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>bullet = instance_create(x, y, obj_bullet);
-bullet.direction = image_angle;
-bullet.image_angle = image_angle;
-bullet.speed = 15;
-</string>
           </argument>
         </arguments>
       </action>

@@ -25,11 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
             <string>obj_ft.hp=50;
+=======
+            <string>obj_ft.hp=150;
+>>>>>>> refs/remotes/origin/minh
 </string>
           </argument>
         </arguments>
       </action>
+<<<<<<< HEAD
       <action>
         <libid>1</libid>
         <id>211</id>
@@ -54,6 +59,8 @@
           </argument>
         </arguments>
       </action>
+=======
+>>>>>>> refs/remotes/origin/minh
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -126,7 +133,11 @@ if(obj_ft.hp&lt;=0){
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
             <string>obj_ft.hp-=10;
+=======
+            <string>obj_ft.hp-=5;
+>>>>>>> refs/remotes/origin/minh
 if(place_meeting(x,y,all)){
     gamepad_set_vibration(0,1,1);
 }
@@ -137,6 +148,7 @@ if(obj_ft.hp&lt;=0){
           </argument>
         </arguments>
       </action>
+<<<<<<< HEAD
       <action>
         <libid>1</libid>
         <id>211</id>
@@ -161,6 +173,8 @@ if(obj_ft.hp&lt;=0){
           </argument>
         </arguments>
       </action>
+=======
+>>>>>>> refs/remotes/origin/minh
     </event>
     <event eventtype="4" ename="obj_tr">
       <action>
@@ -179,10 +193,20 @@ if(obj_ft.hp&lt;=0){
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
             <string>obj_tr.hp-=10;
 if(place_meeting(x,y,all)){
     gamepad_set_vibration(0,1,1);
 }
+=======
+            <string>obj_ft.hp-=5;
+if(place_meeting(x,y,all)){
+    gamepad_set_vibration(0,1,1);
+}
+if(obj_ft.hp&lt;=0){
+    instance_destroy();
+}
+>>>>>>> refs/remotes/origin/minh
 </string>
           </argument>
         </arguments>
@@ -308,6 +332,7 @@ if(speed &gt; 4){
         </arguments>
       </action>
     </event>
+<<<<<<< HEAD
     <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
@@ -334,6 +359,8 @@ bullet.speed = 15;
         </arguments>
       </action>
     </event>
+=======
+>>>>>>> refs/remotes/origin/minh
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
