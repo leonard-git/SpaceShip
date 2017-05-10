@@ -50,10 +50,6 @@
             <kind>1</kind>
             <string>///Friction
 speed = max(speed - 0.05, 0);
-if(place_meeting(x,y,all)){
-    obj_tr.hp-=10;
-    gamepad_set_vibration(0,1,1);
-}
 if(obj_tr.hp&lt;=0){
     instance_destroy();
 }
@@ -72,7 +68,7 @@ if(obj_tr.hp&lt;=0){
         <exetype>1</exetype>
         <functionname>action_bounce</functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -105,18 +101,13 @@ if(obj_tr.hp&lt;=0){
           <argument>
             <kind>1</kind>
             <string>obj_tr.hp-=10;
-if(place_meeting(x,y,all)){
-    gamepad_set_vibration(0,1,1);
-}
-if(obj_tr.hp&lt;=0){
-    instance_destroy();
-}
+gamepad_set_vibration(0,1,1);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_ft">
+    <event eventtype="4" ename="obj_player">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -134,12 +125,8 @@ if(obj_tr.hp&lt;=0){
           <argument>
             <kind>1</kind>
             <string>obj_tr.hp-=10;
-if(place_meeting(x,y,all)){
-    gamepad_set_vibration(0,1,1);
-}
-if(obj_tr.hp&lt;=0){
-    instance_destroy();
-}
+gamepad_set_vibration(0,1,1);
+
 </string>
           </argument>
         </arguments>
